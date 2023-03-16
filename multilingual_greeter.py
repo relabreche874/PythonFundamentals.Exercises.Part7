@@ -26,7 +26,9 @@ def print_language_options(lang_options: Dict[int, str]) -> None:
     Values are strings representing the name of a language
     :return: None
     """
-    pass  # remove pass statement and implement me
+    print("Please choose a language: ")
+    for n in lang_options :
+        print(f"{n}: {lang_options[n]}")
 
 
 def language_input() -> int:
