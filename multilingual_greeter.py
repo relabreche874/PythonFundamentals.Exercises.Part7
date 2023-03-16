@@ -79,7 +79,7 @@ def name_input(name_prompt: str) -> str:
     :param name_prompt: A string in the user's chosen language that asks them for their name
     :return: The user's response when asked for their name
     """
-    pass  # remove pass statement and implement me
+    return input(name_prompt)
 
 
 def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> None:
@@ -92,7 +92,10 @@ def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> Non
     :param lang_choice: The language the user has chosen.
     :return:
     """
-    pass  # remove pass statement and implement me
+
+    print(f"{greetings_options.get(lang_choice)} {name}")
+
+
 
 
 if __name__ == '__main__':
