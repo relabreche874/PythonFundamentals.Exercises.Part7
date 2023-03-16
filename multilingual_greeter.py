@@ -51,7 +51,7 @@ def language_choice_is_valid(lang_options: Dict[int, str], lang_choice: int) -> 
     :param lang_choice: An integer representing the value the user selected
     :return: A boolean representing the validity of the lang_choice
     """
-    pass  # remove pass statement and implement me
+    return lang_choice in lang_options
 
 
 def get_name_input(name_prompt_options: Dict[int, str], lang_choice: int) -> str:
@@ -64,7 +64,12 @@ def get_name_input(name_prompt_options: Dict[int, str], lang_choice: int) -> str
     :param lang_choice: The language the user has chosen
     :return:
     """
-    pass  # remove pass statement and implement me
+    if lang_choice == 1 :
+        return name_prompt_options[1]
+    elif lang_choice == 2 :
+        return name_prompt_options[2]
+    elif lang_choice == 3 :
+        return name_prompt_options[3]
 
 
 def name_input(name_prompt: str) -> str:
