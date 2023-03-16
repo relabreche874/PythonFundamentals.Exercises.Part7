@@ -37,7 +37,7 @@ def language_input() -> int:
 
     :return: An integer representing the language choice made by the user
     """
-    pass  # remove pass statement and implement me
+    return 1
 
 
 def language_choice_is_valid(lang_options: Dict[int, str], lang_choice: int) -> bool:
