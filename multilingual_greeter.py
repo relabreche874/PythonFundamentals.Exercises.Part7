@@ -3,18 +3,15 @@ from typing import Dict
 # Populate this dictionary with at least two languages.
 # Use integers for keys and strings for values.
 # Example: Key = 1. Value = 'English'.
-lang_dict = {1: "English", 2: "Japanese", 3: "Espanol"
-}
+lang_dict = {1: "English", 2: "Japanese", 3: "Espanol"}
 
 # Populate this dictionary with appropriate prompts that correspond with the ids from lang_dict.
 # Example: Key = 1. Value = 'What is your name?'.
-name_prompt_dict = {1: "What is your name?", 2: "名前はなんですか", 3: "Cómo te llamas?"
-}
+name_prompt_dict = {1: "What is your name?", 2: "名前はなんですか", 3: "Cómo te llamas?"}
 
 # Populate this dictionary with appropriate prompts that correspond with the ids from lang_dict.
 # Example: Key = 1. Value = 'Hello'.
-greetings_dict = {1: "Hello", 2: "こんにちは", 3: "Hola!"
-}
+greetings_dict = {1: "Hello", 2: "こんにちは", 3: "Hola!"}
 
 
 def print_language_options(lang_options: Dict[int, str]) -> None:
@@ -28,8 +25,7 @@ def print_language_options(lang_options: Dict[int, str]) -> None:
     """
     print("Please choose a language: ")
     for n in lang_options :
-        input(f"{n}: {lang_options[n]}")
-
+        print(f"{n}: {lang_options[n]}")
 
 def language_input() -> int:
     """
@@ -37,7 +33,8 @@ def language_input() -> int:
 
     :return: An integer representing the language choice made by the user
     """
-    return 1
+    lang_choice = input("Please pick a language: ") # takes input from the user
+    return int(lang_choice) # returns the user input and casts it into an int
 
 
 def language_choice_is_valid(lang_options: Dict[int, str], lang_choice: int) -> bool:
